@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" async></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- SIDENAV -->
+    <div class="titlebar">
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li><i class="fa-brands fa-python"></i></li>
+          <li><i class="fa-brands fa-r-project"></i></li>
+          <li><i class="fa-brands fa-java"></i></li>
+          <li><i class="fa-brands fa-js"></i></li>
+          <li><i class="fa-solid fa-database"></i></li>
+          <li><i class="fa-brands fa-react"></i></li>
+          <li><i class="fa-brands fa-angular"></i></li>
+          <li><i class="fa-brands fa-node"></i></li>
+          <li><i class="fa-brands fa-android"></i></li>
+        </ul>
+        <ul class="marquee-content" aria-hidden="true">
+          <li><i class="fa-brands fa-python"></i></li>
+          <li><i class="fa-brands fa-r-project"></i></li>
+          <li><i class="fa-brands fa-java"></i></li>
+          <li><i class="fa-brands fa-js"></i></li>
+          <li><i class="fa-solid fa-database"></i></li>
+          <li><i class="fa-brands fa-react"></i></li>
+          <li><i class="fa-brands fa-angular"></i></li>
+          <li><i class="fa-brands fa-node"></i></li>
+          <li><i class="fa-brands fa-android"></i></li>
+        </ul>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="toggle" />
+        <div class="menu-btn"><span></span></div>
+        <div class="sidenav">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+
+            <li>
+              <a href="https://github.com/harshkaso">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/harsh-kasodariya/">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.hackerrank.com/HarshKaso">
+                <i class="fa-brands fa-hackerrank"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://stackoverflow.com/users/16496244/k450">
+                <i class="fa-brands fa-stack-overflow"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="wrapper">
+      <div class="main-content">
+        <div id="home" class="big-title brute-force-effect">
+          HARSH KASODARIYA
+        </div>
+
+        <div class="folio">
+          <span class="today"></span>
+          <span>example@email.com</span>
+          <span>Issue No. 0</span>
+        </div>
+
+        <section id="portfolio" class="portfolio">
+          <h1>
+            Celebrating Growth: Unveiling a Remarkable Portfolio Showcasing
+            Success and Progress
+          </h1>
+          <!-- PORTFOLIO GALLERY -->
+          <div class="gallery">
+            <!-- PROJECT 1 -->
+            <div class="card" id="bsd">
+              <img
+                class="cover-img"
+                src="https://images.unsplash.com/photo-1495036019936-220b29b930ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODk0ODQ5ODB8&ixlib=rb-4.0.3&q=85"
+              />
+              <div class="description">
+                <input
+                  type="checkbox"
+                  id="bsd-details"
+                  class="read-more-state"
+                />
+                <div class="details">
+                  <h2>
+                    Revolutionizing Resource Management: Construction Vehicle
+                    Detection Project Utilizes YOLOv8 to Monitor Site Traffic
+                  </h2>
+                  <p class="read-more-target">
+                    The Construction Vehicle Detection Project, sponsored by
+                    BSD, marks a pioneering step in resource management for
+                    construction sites. Employing YOLOv8 and a custom dataset
+                    hosted on Roboflow, the project delivers unparalleled
+                    accuracy in monitoring vehicles entering and exiting the
+                    site. Developed on Google Colab, the team tirelessly
+                    optimized the model to tackle edge cases and ensure robust
+                    performance. With its ability to precisely track site
+                    traffic, the project promises to revolutionize construction
+                    site operations, elevating safety, and bolstering overall
+                    efficiency for a brighter future in the construction
+                    industry.
+                  </p>
+                </div>
+                <label for="bsd-details" class="read-more-trigger"></label>
+              </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="card" id="chipy">
+              <img
+                class="cover-img"
+                src="https://github.com/Timendus/chip8-test-suite/raw/main/pictures/corax+.png"
+              />
+              <div class="description">
+                <input
+                  type="checkbox"
+                  id="chipy-details"
+                  class="read-more-state"
+                />
+                <div class="details">
+                  <h2>
+                    Chipy: A Python-based Chip-8 Emulator Reviving Retro Gaming
+                    Sensations
+                  </h2>
+                  <p class="read-more-target">
+                    With its simplicity and elegance, Chipy allows enthusiasts
+                    to relive classic titles from the '70s and '80s
+                    effortlessly. Through the convergence of Python's modern
+                    technology and the timeless appeal of Chip-8 games, Chipy
+                    offers a user-friendly experience for both developers and
+                    gamers alike, reviving the magic of vintage gaming in the
+                    digital age.
+                  </p>
+                </div>
+                <label for="chipy-details" class="read-more-trigger"></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="bio">
+          <h1>
+            Tech Enthusiast Unleashes Creativity and Pushes Technological
+            Boundaries
+          </h1>
+          <input type="checkbox" id="about-details" class="read-more-state" />
+          <div class="details">
+            <p>
+              <em>Toronto, <span class="today"></span></em> - Harsh Kasodariya
+              is a dynamic tech enthusiast based in Toronto, renowned for his
+              passion for technology and creativity. With a strong background in
+              Computer Science and Data Analytics, he stands out for his
+              remarkable problem-solving skills and unwavering determination.
+              Harsh's journey into technology began with a solid academic
+              foundation, but his true brilliance lies in his ability to create
+              extraordinary projects from scratch. Beyond coding, he expresses
+              himself artistically through sketching, music production, and
+              puzzle-solving. As a versatile leader, he excels in handling
+              stress and guiding teams towards common goals. Harsh's insatiable
+              curiosity drives him to explore the uncharted territories of
+              computer science and AI, earning admiration and respect among
+              peers. His journey serves as an inspiration, redefining
+              possibilities in the world of technology, making him a rising star
+              with a promising future in the tech industry.
+            </p>
+
+            <h2 class="read-more-target">
+              Passion for Technology and Creativity
+            </h2>
+            <p class="read-more-target">
+              In the ever-evolving world of technology, one name stands out for
+              its relentless pursuit of innovation and boundless creativity.
+              Meet Harsh Kasodariya, a dynamic tech enthusiast and lifelong
+              learner, whose passion for exploring the frontiers of technology
+              knows no bounds. Armed with a strong background in Computer
+              Science and Data Analytics, Harsh is making waves with his
+              remarkable problem-solving skills and unwavering determination.
+            </p>
+            <p class="read-more-target">
+              Harsh's journey into the world of technology began with a solid
+              academic foundation. His expertise in coding and technology is
+              evident, but his true brilliance lies in his ability to create
+              something extraordinary from scratch. Beyond the walls of
+              academia, he finds joy in embarking on ambitious projects,
+              channeling his creativity into every line of code.
+            </p>
+            <p class="read-more-target">
+              However, coding isn't the only realm where Harsh excels. Delving
+              into a diverse range of interests, he explores avenues that
+              challenge his mind and nurture his creativity. From sketching to
+              music production, Harsh embraces every opportunity to express
+              himself artistically. And it doesn't stop there – with an
+              astonishing skill in solving Rubik's cubes and puzzles, he
+              continues to amaze those around him.
+            </p>
+            <p class="read-more-target">
+              But what sets Harsh apart isn't just his prowess in various
+              endeavors; it's his versatility as a leader. Equipped with an
+              innate ability to handle stress and guide teams towards common
+              goals, Harsh has proven to be an invaluable asset in dynamic and
+              demanding environments.
+            </p>
+
+            <h2 class="read-more-target">Unraveling Technological Frontiers</h2>
+            <p class="read-more-target">
+              What truly drives Harsh is an insatiable curiosity to uncover the
+              inner workings of technology's most enigmatic realms. Venturing
+              into the fascinating world of computer science and artificial
+              intelligence, he navigates uncharted territories with fearless
+              determination. His thirst for knowledge and willingness to explore
+              the unknown have earned him admiration and respect among his
+              peers.
+            </p>
+            <p class="read-more-target">
+              With every line of code he crafts and every complex algorithm he
+              unravels, Harsh embodies the spirit of innovation and continuous
+              growth. His journey serves as an inspiration to those around him,
+              inspiring them to dream big and reach for the stars.
+            </p>
+            <p class="read-more-target">
+              As he moves forward, Harsh Kasodariya is undoubtedly poised to
+              leave a lasting impact on the world of technology. His sharp
+              problem-solving skills and unyielding determination will
+              undoubtedly shape the future of the tech industry.
+            </p>
+            <p class="read-more-target">
+              Keep an eye on this rising star, as he paves the way for
+              innovation and exploration, redefining what's possible in the
+              world of technology.
+            </p>
+            <p class="byline">
+              <em>Written by John Doe, Technology Correspondent</em>
+            </p>
+          </div>
+          <label for="about-details" class="read-more-trigger"></label>
+        </section>
+
+        <section id="contact" class="contact">
+          <h1>
+            Seize the Opportunity: Reach Out and Connect - Our Contact Me
+            Section Awaits Your Inquiries and Collaborative Ventures
+          </h1>
+          <div class="form-container">
+            <form
+              action="https://formsubmit.co/69db594e08af472dc0cdfc25e0f48a1d"
+              method="POST"
+              name="contactForm"
+            >
+              <!--           honeypot -->
+              <input type="text" name="_honey" style="display: none;" />
+              <div class="form-row">
+                <input
+                  type="text"
+                  name="First&nbsp;Name"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="Last&nbsp;Name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="example@email.com"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <textarea
+                  rows="10"
+                  name="Message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="form-row">
+                <input type="button" value="Submit" onclick="submit_form()" />
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
