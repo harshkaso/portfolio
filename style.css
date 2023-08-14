@@ -261,8 +261,7 @@ nav {
 }
 
 .big-title {
-  --size: 4rem;
-  --size: clamp(4rem, 10vw, 10rem);
+  --size: clamp(4rem, 9.5vw, 10rem);
   font-size: var(--size);
   line-height: var(--size);
   padding: 0 1rem;
@@ -305,8 +304,9 @@ section:nth-last-child(2) {
 }
 
 section h1 {
-  font-size: 2rem !important;
-  line-height: 2rem !important;
+  --size: clamp(2rem, 4.75vw, 5rem);
+  font-size: var(--size) !important;
+  line-height: var(--size) !important;
   font-family: var(--bebas-neue);
   border-bottom: 1px solid var(--color-ink);
   margin-bottom: 0.5rem;
@@ -315,10 +315,11 @@ section h1 {
 }
 
 section h2 {
+  --size: clamp(1.5rem, 2.375vw, 2.5rem);
+  font-size: var(--size) !important;
+  line-height: var(--size) !important;
   font-family: var(--oswald);
   font-weight: normal;
-  font-size: 1.5rem !important;
-  line-height: 1.5rem !important;
 }
 
 section h2 + p,
@@ -434,7 +435,7 @@ section p + h2 {
 
 .form-container {
   width: 100%;
-  max-width: 768px;
+  max-width: 1024px;
   justify-self: center;
 }
 
@@ -505,6 +506,15 @@ input[type="button"]:active {
 }
 
 @media screen and (min-width: 1024px) {
+  .read-more-state,
+  .read-more-trigger {
+    display: none;
+  }
+  .details .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
   .bio {
     column-count: 3;
   }
