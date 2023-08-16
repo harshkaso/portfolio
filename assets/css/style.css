@@ -4,10 +4,10 @@
   --anton: "Anton", sans-serif;
   --oswald: "Oswald", sans-serif;
   --bebas-neue: "Bebas Neue", sans-serif;
-  --color-paper: #fef4ec; /*inverted rich black*/
+  --color-paper: #e9e6e4; /*inverted rich black*/
   --color-ink: #010b13; /*rich black*/
-  --color-neutral: #7f7f7f;
-  --color-highlight: #c4c4c4;
+  --color-neutral: #75787b;
+  --color-highlight: #8f9ca4;
 
   /*   --color-paper: #010b13;
   --color-ink: #fef4ec; */
@@ -21,10 +21,11 @@
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   height: 5px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 1.5rem;
-  background: var(--color-highlight);
+  /* background: var(--color-highlight); */
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 1.5rem;
