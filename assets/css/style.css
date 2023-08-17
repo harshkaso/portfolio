@@ -5,9 +5,29 @@
   --oswald: "Oswald", sans-serif;
   --bebas-neue: "Bebas Neue", sans-serif;
   --color-paper: #e9e6e4; /*inverted rich black*/
-  --color-ink: #010b13; /*rich black*/
+  --color-ink: #0e1113; /*rich black*/
   --color-neutral: #75787b;
   --color-highlight: #8f9ca4;
+
+  --shadow-color: 24deg 4% 56%;
+  --shadow-elevation-low: -0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.34),
+    -0.5px 0.5px 0.8px -1.2px hsl(var(--shadow-color) / 0.34),
+    -1.3px 1.2px 2px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: -0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.29),
+    -0.8px 0.8px 1.3px -0.6px hsl(var(--shadow-color) / 0.29),
+    -1.7px 1.6px 2.6px -1.2px hsl(var(--shadow-color) / 0.29),
+    -3.3px 3.2px 5.2px -1.9px hsl(var(--shadow-color) / 0.29),
+    -6.4px 6.1px 9.9px -2.5px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-high: -0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.27),
+    -1.5px 1.5px 2.4px -0.3px hsl(var(--shadow-color) / 0.27),
+    -2.7px 2.6px 4.2px -0.6px hsl(var(--shadow-color) / 0.27),
+    -4.1px 4px 6.4px -0.8px hsl(var(--shadow-color) / 0.27),
+    -6.1px 5.8px 9.5px -1.1px hsl(var(--shadow-color) / 0.27),
+    -8.7px 8.3px 13.5px -1.4px hsl(var(--shadow-color) / 0.27),
+    -12.4px 11.8px 19.3px -1.7px hsl(var(--shadow-color) / 0.27),
+    -17.3px 16.5px 26.9px -1.9px hsl(var(--shadow-color) / 0.27),
+    -23.8px 22.7px 37px -2.2px hsl(var(--shadow-color) / 0.27),
+    -32.1px 30.6px 49.9px -2.5px hsl(var(--shadow-color) / 0.27);
 
   /*   --color-paper: #010b13;
   --color-ink: #fef4ec; */
@@ -56,10 +76,13 @@ body {
 .titlebar {
   /* position: fixed; */
   display: flex;
+  justify-content: center;
   background: var(--color-ink);
+  color: var(--color-paper);
   width: 100%;
   height: 50px;
   z-index: 1;
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 /* ---------- MARQUEE --------------- */
@@ -72,8 +95,6 @@ body {
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-  background: var(--color-ink);
-  color: var(--color-paper);
   font-size: 1.5rem;
   padding: 2px 0;
 }
@@ -162,13 +183,10 @@ nav {
   transform: rotate(-45deg);
 }
 
-/* ============== animate menu-btn hover ============== */
-#toggle:checked ~ .menu-btn {
-  transform: rotate(540deg);
-}
-
 .sidenav {
   position: fixed;
+  margin-top: 50px;
+  padding: 0.5rem;
   top: 0;
   right: 0;
   width: 50px;
@@ -176,10 +194,12 @@ nav {
   display: flex;
   /* text-align: center; */
   justify-content: center;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  transform: translateY(-100%);
-  transition: transform 0.6s ease;
+  background: rgba(233, 230, 228, 0.2);
+  color: var(--color-ink);
+  transform: translateX(100%);
+  transition: all 0.6s ease;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .sidenav ul::-webkit-scrollbar {
@@ -188,11 +208,11 @@ nav {
 
 #toggle:checked ~ .sidenav {
   transform: none;
-  transition: transform 0.6s ease;
+  box-shadow: var(--shadow-elevation-medium);
+  transition: all 0.6s ease;
 }
 
 .sidenav ul {
-  margin-top: 50px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -217,13 +237,13 @@ nav {
   text-decoration: none;
   font-family: var(--oswald);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
   color: var(--color-neutral);
   transition: opacity 0.3s ease;
 }
 
 .sidenav a:hover {
-  color: var(--color-paper);
+  color: var(--color-ink);
   /* -webkit-text-stroke: 1px var(--color-paper); */
   /* transition: all 0.3s ease; */
 }
@@ -337,27 +357,13 @@ section p + h2 {
   padding-bottom: 0.5rem;
 }
 
-/* .gallery:hover::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  pointer-events: none;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--color-ink) 700%
-  );
-  width: 15%;
-  height: 100%;
-} */
-
 .card {
   min-width: 100%;
   scroll-snap-align: center;
-  /* display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  gap: 0.5rem; */
+}
+
+.cover-img:hover {
+  filter: none;
 }
 
 .cover-img {
@@ -365,6 +371,7 @@ section p + h2 {
   height: 200px;
   margin-right: 0.5rem;
   float: left;
+  cursor: pointer;
   object-fit: cover;
   object-position: center;
   filter: brightness(0.8) grayscale(1);
@@ -520,8 +527,14 @@ input[type="button"]:active {
 }
 
 @media screen and (min-width: 1280px) {
+  .marquee {
+    width: 75%;
+    max-width: 1280px;
+    margin: 0;
+  }
+
   .main-content {
-    width: 70%;
+    width: 75%;
     max-width: 1280px;
     border-left: 1px solid var(--color-ink);
     border-right: 1px solid var(--color-ink);
